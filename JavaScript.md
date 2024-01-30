@@ -184,6 +184,114 @@ const a = parseInt("007");
 const a = parseInt("11", 2);
 变量 radix 表示 11 是在二进制系统中。 这个示例将字符串 11 转换为整数 3。
 
+# 数组和对象
+
+## 使用方括号访问数组的元素
+如果我们要从数组 ourArray 中取出数据 a 并将其赋值给另一个变量，可以这样写：
+let ourVariable = ourArray[0];
+设置一个索引位置的元素值：
+ourArray[1] = "not b anymore";
+
+## 使用 push() 和 unshift() 为数组添加元素
+.push()方法会将元素插入到数组的末尾，而 .unshift()方法会将元素插入到数组的开头。
+
+## 使用 pop() 和 shift() 从数组中删除元素
+.pop()会从数组的末尾移除一个元素，而.shift()会从数组的开头移除一个元素。
+
+## 使用 splice() 删除添加元素
+splice() 的第一个参数代表从数组中的哪个索引开始移除元素，而第二个参数表示要从数组中的这个位置开始删除多少个元素。
+array.splice(2, 2);
+第三个参数可以是一个或多个元素，这些元素会被添加到数组中。
+numbers.splice(startIndex, amountToDelete, 13, 14);
+
+## 使用 slice() 复制数组元素
+.slice(1, 3)不会修改数组，而是会复制，或者说*提取（extract）*给定数量的元素到一个新数组。 slice() 只接收 2 个输入参数：第一个是开始提取元素的位置（索引），第二个是提取元素的结束位置（索引）。 提取的元素中不包括第二个参数所对应的元素。
+
+## 使用展开运算符复制数组
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+
+## 使用展开运算符合并数组
+let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+thatArray 会有值 ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
+
+## 使用 indexOf() 检查元素是否存在
+.indexOf('dates');方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 -1。
+
+## 删除对象的属性
+delete ourDog.bark;
+
+.hasOwnProperty(propname)检查对象是否有指定的属性
+
+## 将键值对添加到对象中
+如果要设置的属性中存在空格，或者要设置的属性是一个变量，那我们必须使用方括号表示法（bracket notation）来为对象添加属性。
+
+## 使用 for...in 语句遍历对象
+for (let user in users) {
+console.log(user);}
+
+## 使用 Object.keys() 生成由对象的所有属性组成的数组
+
+# 基础数据结构
+
+## 使用方括号访问数组的元素
+如果我们要从数组 ourArray 中取出数据 a 并将其赋值给另一个变量，可以这样写：
+let ourVariable = ourArray[0];
+设置一个索引位置的元素值：
+ourArray[1] = "not b anymore";
+
+## 使用 push() 和 unshift() 为数组添加元素
+.push()方法会将元素插入到数组的末尾，而 .unshift()方法会将元素插入到数组的开头。
+
+## 使用 pop() 和 shift() 从数组中删除元素
+.pop()会从数组的末尾移除一个元素，而.shift()会从数组的开头移除一个元素。
+
+## 使用 splice() 删除添加元素
+splice() 的第一个参数代表从数组中的哪个索引开始移除元素，而第二个参数表示要从数组中的这个位置开始删除多少个元素。
+array.splice(2, 2);
+第三个参数可以是一个或多个元素，这些元素会被添加到数组中。
+numbers.splice(startIndex, amountToDelete, 13, 14);
+
+## 使用 slice() 复制数组元素
+.slice(1, 3)不会修改数组，而是会复制，或者说*提取（extract）*给定数量的元素到一个新数组。 slice() 只接收 2 个输入参数：第一个是开始提取元素的位置（索引），第二个是提取元素的结束位置（索引）。 提取的元素中不包括第二个参数所对应的元素。
+
+## 使用展开运算符复制数组
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+
+## 使用展开运算符合并数组
+let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+thatArray 会有值 ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
+
+## 使用 indexOf() 检查元素是否存在
+.indexOf('dates');方法接受一个元素作为输入参数，并返回该元素在数组中的位置（索引）；若该元素不存在于数组中则返回 -1。
+
+## 将键值对添加到对象中
+如果要设置的属性中存在空格，或者要设置的属性是一个变量，那我们必须使用方括号表示法（bracket notation）来为对象添加属性。
+
+## 使用 for...in 语句遍历对象
+for (let user in users) {
+console.log(user);}
+
+## 使用 Object.keys() 生成由对象的所有属性组成的数组
+
+# 调试
+
+## 使用控制台检查变量值
+console.log() 方法可能是最有用的调试工具，它可以将括号中的内容输出到控制台。
+console.log('Hello world!');
+
+## 使用 type of 检查变量的类型
+console.log(typeof "");
+console.log(typeof 0);
+console.log(typeof []);
+console.log(typeof {});
+JavaScript 有七种原始（不可变）数据类型： Boolean，Null，Undefined，Number，String，Symbol （new with ES6），BigInt （new with ES2020）和一种可变数据类型：Object。 注意：在 JavaScript 中，数组在本质上是一种对象。
+
 # 面向对象编程
 
 ## 在对象上创建方法
@@ -400,6 +508,287 @@ console.log("Flying, wooosh!");
 注意：一个立即调用函数表达式（IIFE）返回了一个 motionModule 对象。 返回的这个对象包含了作为对象属性的所有 mixin 行为。 module 模式的优点是，所有的运动相关的行为都可以打包成一个对象，然后由代码的其他部分使用。 下面是一个使用它的例子：
 motionModule.glideMixin(duck);
 duck.glide();
+
+# 正则表达式
+
+## 使用测试方法
+测试正则表达式的一种方法是使用 .test() 方法。 .test() 方法会把编写的正则表达式和字符串（即括号内的内容）匹配，如果成功匹配到字符，则返回 true，反之，返回 false。
+let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr);
+你还可以匹配多个规则，这可以通过添加更多的匹配模式来实现。 这些匹配模式将包含更多的 OR 操作符来分隔它们，比如/yes|no|maybe/。
+
+## 提取匹配项
+'string'.match(/regex/);
+/regex/.test('string');
+
+## 匹配时忽略大小写
+/freeCodeCamp/i
+
+## 全局匹配
+若要多次搜寻或提取模式匹配，可以使用 g 标志。
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+在正则表达式上可以有多个标志，比如 /search/gi
+
+## 用通配符匹配任何内容
+例如，如果想匹配 hug、huh、hut 和 hum，可以使用正则表达式 /hu./ 匹配以上四个单词。
+let humStr = "I'll hum a song";let hugStr = "Bear hug";let huRegex = /hu./;
+huRegex.test(humStr);
+huRegex.test(hugStr);
+
+## 将单个字符与多种可能性匹配
+例如，如果想要匹配 bag、big 和 bug，但是不想匹配 bog。 可以创建正则表达式 /b[aiu]g/ 来执行此操作。 [aiu] 是只匹配字符 a、i 或者 u 的字符集。
+let bgRegex = /b[aiu]g/;
+
+## 匹配字母表中的数字和字母
+在字符集中，可以使用连字符（-）来定义要匹配的字符范围。
+例如，要匹配小写字母 a 到 e，你可以使用 [a-e]。
+/[0-5]/ 匹配 0 和 5 之间的任意数字，包含 0 和 5。
+let myRegex = /[a-z0-9]/ig;
+
+## 匹配单个未指定的字符
+要创建否定字符集，需要在开始括号后面和不想匹配的字符前面放置脱字符（即^）。
+例如，/[^aeiou]/gi 匹配所有非元音字符。 注意，字符 .、!、[、@、/ 和空白字符等也会被匹配，该否定字符集仅排除元音字符。
+let myRegex = /[^aeiou0-9]/ig;
+
+## 匹配出现一次或多次的字符/a+/
+可以使用 + 符号来检查情况是否如此。 记住，字符或匹配模式必须一个接一个地连续出现。 这就是说，字符必须一个接一个地重复。
+例如，/a+/g 会在 abc 中匹配到一个匹配项，并且返回 ["a"]。 因为 + 的存在，它也会在 aabc 中匹配到一个匹配项，然后返回 ["aa"]。
+
+## 匹配出现零次或多次的字符/go*/
+
+## 用惰性匹配来查找字符
+在正则表达式中，贪婪（greedy）匹配会匹配到符合正则表达式匹配模式的字符串的最长可能部分，并将其作为匹配项返回。 另一种方案称为懒惰（lazy）匹配，使用 ? 字符来变成懒惰匹配，它会匹配到满足正则表达式的字符串的最小可能部分。
+
+## 匹配字符串的开头/^Ricky/ 匹配字符串的末尾/story$/
+
+## 匹配所有的字母和数字/\w/ 匹配除了字母和数字的所有符号/\W/
+\w， 这个缩写等同于[A-Za-z0-9_]。 此字符类匹配大写字母和小写字母以及数字。 注意，这个字符类也包含下划线字符 (_)。
+
+## 匹配所有数字/\d/ 匹配所有非数字/\D/
+
+## 匹配空白字符/\s/ 匹配非空白字符/\S/
+可以使用 \s 搜寻空格，其中 s 是小写。 此匹配模式将匹配空格、回车符、制表符、换页符和换行符。 可以认为这类似于元字符 [ \r\t\f\n\v]。
+
+## 指定匹配的确切数量/ha{3}h/ /a{3,5}h/
+例如，要匹配出现 3 到 5 次字母 a 的在字符串 ah，正则表达式应为/a{3,5}h/。
+
+## 检查全部或无/colou?r/
+
+正向先行断言和负向先行断言
+正向先行断言会查看并确保搜索匹配模式中的元素存在，但实际上并不匹配。 正向先行断言的用法是 (?=...)，其中 ... 就是需要存在但不会被匹配的部分。
+另一方面，负向先行断言会查看并确保搜索匹配模式中的元素不存在。 负向先行断言的用法是 (?!...)，其中 ... 是希望不存在的匹配模式。 如果负向先行断言部分不存在，将返回匹配模式的其余部分。
+先行断言的更实际用途是检查一个字符串中的两个或更多匹配模式。 这里有一个简单的密码检查器，密码规则是 3 到 6 个字符且至少包含一个数字：
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+checkPass.test(password);
+
+检查混合字符组 /P(engu|umpk)in/
+
+## 使用捕获组重用模式
+let repeatStr = "row row row your boat";
+下面的示例是匹配被空格隔开的两个相同单词：
+let repeatRegex = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+
+## 使用捕获组搜索和替换
+可以在字符串上使用 .replace() 方法来搜索并替换字符串中的文本。
+ .replace() 的输入首先是想要搜索的正则表达式匹配模式。 第二个参数是用于替换匹配的字符串或用于执行某些操作的函数。
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+replace 调用将返回字符串 The sky is blue.。
+你还可以使用美元符号（$）访问替换字符串中的捕获组。
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+调用 replace 将返回字符串 Camp Code。
+
+## 删除开头和结尾的空白
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; 
+let result =hello.replace(wsRegex, "");
+
+# ES6
+
+## 使用箭头函数编写简洁的匿名函数
+const myFunc = () => {
+const myVar = "value";
+return myVar;}
+当不需要函数体，只返回一个值的时候，箭头函数允许你省略 return 关键字和外面的大括号。 这样就可以将一个简单的函数简化成一个单行语句。
+const myFunc = () => "value";
+
+## 设置函数的默认参数
+const greeting = (name = "Anonymous") => "Hello " + name;
+
+console.log(greeting("John"));
+console.log(greeting());
+
+## 将 rest 操作符与函数参数一起使用
+function howMany(...args) {
+return "You have passed " + args.length + " arguments.";}
+
+## 使用 spread 运算符展开数组项
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+...arr 返回一个解压的数组。 也就是说，它展开数组。 然而，展开操作符只能够在函数的参数中或者数组中使用。
+
+
+## 解构赋值：
+const user = { name: 'John Doe', age: 34 };
+
+const name = user.name;const age = user.age;
+
+使用解构赋值来获取对象的值const { name, age } = user;
+
+使用解构赋值从对象中分配变量const { name: userName, age: userAge } = user;
+
+使用解构赋值从嵌套对象中分配变量const { johnDoe: { age: userAge, email: userEmail }} = user;
+
+使用解构赋值从数组中分配变量
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+console.log(a, b, c);
+
+使用解构赋值配合 rest 操作符来重新分配数组元素
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+console.log(a, b);
+console.log(arr);
+
+使用解构赋值将对象作为函数的参数传递
+const profileUpdate = (profileData) => {
+const { name, age, nationality, location } = profileData;
+
+}
+上面的操作解构了传给函数的对象。 这样的操作也可以直接在参数里完成：
+const profileUpdate = ({ name, age, nationality, location }) => {
+
+}
+
+## 使用模板字面量创建字符串
+const person = {
+name: "Zodiac Hasbro",
+age: 56};
+
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`;
+
+console.log(greeting);
+
+## 使用简单字段编写简洁的对象字面量声明
+const getMousePosition = (x, y) => ({
+x: x,
+y: y
+});
+
+const getMousePosition = (x, y) => ({ x, y });
+
+## 用 ES6 编写简洁的函数声明
+用 ES6 的语法在对象中定义函数的时候，可以删除 function 关键词和冒号。
+const person = {
+name: "Taylor",
+sayHello() {
+return `Hello! My name is ${this.name}.`;
+}};
+
+## 使用 class 语法定义构造函数
+var SpaceShuttle = function(targetPlanet){
+this.targetPlanet = targetPlanet;}var zeus = new SpaceShuttle('Jupiter');
+class 语法只是简单地替换了构造函数 constructor 的写法：
+class SpaceShuttle {
+constructor(targetPlanet) {
+this.targetPlanet = targetPlanet;
+}}const zeus = new SpaceShuttle('Jupiter');
+
+## 使用 getter 和 setter 来控制对象的访问
+Getter 函数的作用是可以让对象返回一个私有变量，而不需要直接去访问私有变量。
+Setter 函数的作用是可以基于传进的参数来修改对象中私有变量。 这些修改可以是计算，或者是直接替换之前的值。
+class Book {
+constructor(author) {
+this._author = author;
+}
+// getter
+get writer() {
+return this._author;
+}
+// setter
+set writer(updatedAuthor) {
+this._author = updatedAuthor;
+}}const novel = new Book('anonymous');
+console.log(novel.writer);
+novel.writer = 'newAuthor';
+console.log(novel.writer);
+
+## 创建一个模块脚本
+<script type="module" src="filename.js"></script>
+
+## 用 export 来重用代码块
+export const add = (x, y) => {
+return x + y;}
+上面是导出单个函数常用方法，还可以这样导出：
+const add = (x, y) => {
+return x + y;}
+
+export { add };
+重复第一个例子的代码可以导出多个对象或函数，在第二个例子里面的导出语句中添加更多值也可以导出多项，例子如下：
+export { add, subtract };
+
+## 通过 import 复用 JavaScript 代码
+import { add } from './math_functions.js';
+在这里，import 会在 math_functions.js 里找到 add，只导入这个函数，忽略剩余的部分。
+通过在 import 语句里添加项目，可以从文件里导入多个项目，如下：
+import { add, subtract } from './math_functions.js';
+
+## 用 * 从文件中导入所有内容
+下面是一个从同目录下的 math_functions.js 文件中导入所有内容的例子：
+import * as myMathModule from "./math_functions.js";
+下面是使用导入的 add 和 subtract 函数的例子：
+myMathModule.add(2,3);
+myMathModule.subtract(5,3);
+
+## 用 export default 创建一个默认导出
+在文件中只有一个值需要导出的时候，通常会使用这种语法。 它也常常用于给文件或者模块创建返回值。
+export default function add(x, y) {
+return x + y;}
+
+export default function(x, y) {
+return x + y;}
+第一个是命名函数，第二个是匿名函数。
+export default 用于为模块或文件声明一个返回值，在每个文件或者模块中应当只默认导出一个值。 此外，你不能将 export default 与 var、let 或 const 同时使用。
+
+## 导入一个默认的导出
+import add from "./math_functions.js";
+
+## 创建一个 JavaScript Promise
+Promise 是构造器函数，需要通过 new 关键字来创建。 构造器参数是一个函数，该函数有两个参数 - resolve 和 reject。 通过它们来判断 promise 的执行结果。 用法如下：
+const myPromise = new Promise((resolve, reject) => {
+
+});
+
+## 通过 resolve 和 reject 完成 Promise
+Promise 有三个状态：pending、fulfilled 和 rejected。
+Promise 成功时调用 resolve，promise 执行失败时调用 reject
+const myPromise = new Promise((resolve, reject) => {
+if(condition here) {
+resolve("Promise was fulfilled");
+} else {
+reject("Promise was rejected");
+}});
+
+## 用 then 处理 Promise 完成的情况
+当 promise 完成 resolve 时会触发 then 方法
+myPromise.then(result => {
+
+});
+result 即传入 resolve 方法的参数。
+
+## 使用 catch 处理 Promise 失败的情况
+myPromise.catch(error => {
+
+});
+error 是传入 reject 方法的参数。
+
+
+
 
 # JS项目
 
